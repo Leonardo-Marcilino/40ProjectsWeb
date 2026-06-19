@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #111;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 750px;
+    width: 100%;
+}
+
+.foto {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.foto img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: all 0.5s;
+}
+
+.foto:hover img {
+    transform: scale(1.08);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0; /* comando novo, ele é um atalho para right left bottom e top - cobre 100% do card*/
+    background: rgba(67, 97, 238, 0.88);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: white;
+    transform: translateY(100%); /* vai pra baixo do card por causa do overflow no pai */
+    transition: all 0.4s ease;
+}
+
+.foto:hover .overlay {
+    transform: translateY(0);
+}
+
+.overlay i {
+    font-size: 32px;
+    margin-bottom: 4px;
+}
+
+.overlay h3 {
+    font-size: 20px;
+}
+
+.overlay p {
+    font-size: 13px;
+    opacity: 0.85;
+}

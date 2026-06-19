@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ede9f7;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    width: 620px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 22px;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.caixa {
+    display: flex;
+    gap: 25px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 140px;
+}
+
+.menu label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #888;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.menu label:hover {
+    color: #7c5cbf;
+}
+
+.conteudo {
+    flex: 1;
+}
+
+.painel {
+    display: none;
+}
+
+.painel h3 {
+    font-size: 18px;
+    color: #222;
+    margin-bottom: 12px;
+}
+
+.painel p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* Aba ativa - muda a cor do label */
+#home:checked  ~ .caixa .menu label[for="home"],
+#blog:checked  ~ .caixa .menu label[for="blog"],
+#help:checked  ~ .caixa .menu label[for="help"],
+#code:checked  ~ .caixa .menu label[for="code"],
+#about:checked ~ .caixa .menu label[for="about"] {
+    background-color: #7c5cbf;
+    color: white;
+}
+
+/* Mostra o painel certo */
+#home:checked  ~ .caixa .conteudo .painel-home  { display: block; }
+#blog:checked  ~ .caixa .conteudo .painel-blog  { display: block; }
+#help:checked  ~ .caixa .conteudo .painel-help  { display: block; }
+#code:checked  ~ .caixa .conteudo .painel-code  { display: block; }
+#about:checked ~ .caixa .conteudo .painel-about { display: block; }

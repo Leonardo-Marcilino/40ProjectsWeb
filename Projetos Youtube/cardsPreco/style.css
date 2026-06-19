@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f0f4ff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #222;
+    margin-bottom: 35px;
+}
+
+.planos {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.card {
+    flex: 1;
+    background: white;
+    border-radius: 16px;
+    padding: 35px 25px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card.destaque {
+    background: #4361ee;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(67, 97, 238, 0.4);
+}
+
+.card.destaque:hover {
+    transform: scale(1.05) translateY(-6px);
+}
+
+.tag {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #f72585;
+    color: white;
+    font-size: 12px;
+    padding: 4px 14px;
+    border-radius: 20px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.destaque h3 {
+    color: white;
+}
+
+.preco {
+    font-size: 48px;
+    font-weight: bold;
+    color: #4361ee;
+    margin-bottom: 25px;
+}
+
+.destaque .preco {
+    color: white;
+}
+
+.preco span {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+ul li {
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.destaque ul li {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.fa-check {
+    color: #2ecc71;
+}
+
+.fa-xmark {
+    color: #e74c3c;
+}
+
+li.desativo {
+    opacity: 0.4;
+}
+
+.btn {
+    display: block;
+    padding: 12px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s;
+}
+
+.btn-outline {
+    border: 2px solid #4361ee;
+    color: #4361ee;
+}
+
+.btn-outline:hover {
+    background: #4361ee;
+    color: white;
+}
+
+.btn-solid {
+    background: white;
+    color: #4361ee;
+}
+
+.btn-solid:hover {
+    background: #f0f4ff;
+}
