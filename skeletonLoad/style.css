@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #aaa;
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    flex: 1;
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+}
+
+.sk {
+    background: linear-gradient(90deg, #e8e8e8 25%, #f5f5f5 50%, #e8e8e8 75%);
+    background-size: 400% 100%;
+    border-radius: 6px;
+    animation: shimmer 1.5s infinite; /*a animação do skeletoin que parece infinita*/
+    margin-bottom: 14px;
+}
+
+@keyframes shimmer {
+    from {
+        background-position: 100% 0;
+    }
+
+    to {
+        background-position: -100% 0;
+    }
+}/* controla a entrada e saido do bacground*/
+
+.sk-imagem {
+    height: 150px;
+    border-radius: 10px;
+}
+
+.sk-titulo {
+    height: 20px;
+    width: 70%;
+}
+
+.sk-linha {
+    height: 14px;
+}
+
+.sk-linha.curta {
+    width: 50%;
+}
+
+.sk-btn {
+    height: 36px;
+    width: 40%;
+    border-radius: 20px;
+    margin-top: 6px;
+}

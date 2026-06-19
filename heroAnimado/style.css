@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: moverGradiente 8s ease infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+@keyframes moverGradiente {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.conteudo {
+    color: white;
+    max-width: 600px;
+    animation: subir 0.8s ease both;
+}
+
+@keyframes subir {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 52px;
+    font-weight: bold;
+    margin-bottom: 18px;
+    line-height: 1.1;
+}
+
+.conteudo>p {
+    font-size: 18px;
+    opacity: 0.9;
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+.botoes {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primario {
+    background: white;
+    color: #333;
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-primario:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secundario {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    transition: background 0.3s;
+}
+
+.btn-secundario:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
